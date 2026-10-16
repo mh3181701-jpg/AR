@@ -673,8 +673,12 @@
 
     <!-- JAVASCRIPT LOGIC & BILINGUAL TRANSLATIONS -->
     <script>
-        // --- LANGUAGE DICTIONARY & CONFIGURATION (Easily editable here) ---
-        let currentLang = 'en'; // Default set to English
+        // --- GOOGLE SHEETS & EMAIL APPS SCRIPT URL ---
+        // Ekhane apnar deployed Google Apps Script Web App URL-ti boshaben
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwsGUd8E2ZrhFNiL6vRKtB61ziOwntvRSB6dqzpmiSs0IAe7LVqhyjPrbyL2lNV8C6aAQ/exec";
+
+        // --- LANGUAGE DICTIONARY & CONFIGURATION ---
+        let currentLang = 'en';
 
         const translations = {
             en: {
@@ -849,10 +853,9 @@
             }
         };
 
-        // --- DIGITAL MENU DATA (Bilingual) ---
+        // --- DIGITAL MENU DATA ---
         const menuItems = [
-            
-             {
+            {
                 id: 1,
                 title: { en: "Plain Rice", bn: "সাদা ভাত" },
                 category: "main",
@@ -862,7 +865,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 2,
                 title: { en: "Beef Steak", bn: "বিফ স্টেক" },
                 category: "main",
                 price: { en: "৳850", bn: "৳৮৫০" },
@@ -871,7 +874,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 3,
                 title: { en: "Beef", bn: "গরুর মাংস" },
                 category: "main",
                 price: { en: "৳140", bn: "৳১৪০" },
@@ -880,7 +883,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 4,
                 title: { en: "Mutton Curry", bn: "খাসির মাংস" },
                 category: "main",
                 price: { en: "৳220", bn: "৳২২০" },
@@ -889,7 +892,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 5,
                 title: { en: "Duck Curry", bn: "হাঁসের মাংস" },
                 category: "main",
                 price: { en: "৳150", bn: "৳১৫০" },
@@ -898,7 +901,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 6,
                 title: { en: "Chicken Curry", bn: "মুরগির মাংস" },
                 category: "main",
                 price: { en: "৳100", bn: "৳১০০" },
@@ -906,9 +909,8 @@
                 img: "https://myfoodstory.com/wp-content/uploads/2024/12/Nadan-Chicken-Curry-Village-Style-Kerala-Chicken-Curry-1.jpg",
                 desc: { en: "", bn: "" }
             },
-            
             {
-                id: 1,
+                id: 7,
                 title: { en: "Rohu Fish Curry", bn: "রুই মাছ" },
                 category: "main",
                 price: { en: "৳50", bn: "৳৫০" },
@@ -916,9 +918,8 @@
                 img: "https://i.ytimg.com/vi/Pu6ki9y9Nug/sddefault.jpg",
                 desc: { en: "", bn: "" }
             },
-            
             {
-                id: 1,
+                id: 8,
                 title: { en: "Hilsa Fish Curry", bn: "ইলিশ মাছ" },
                 category: "main",
                 price: { en: "৳150", bn: "৳১৫০" },
@@ -927,7 +928,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 9,
                 title: { en: "Boal Fish Curry", bn: "বোয়াল মাছ" },
                 category: "main",
                 price: { en: "৳80", bn: "৳৮০" },
@@ -936,7 +937,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 10,
                 title: { en: "Barred Spiny Eel Curry", bn: "গুচি মাছ" },
                 category: "main",
                 price: { en: "৳120", bn: "৳১২০" },
@@ -945,7 +946,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 11,
                 title: { en: "Tengara Catfish Curry", bn: "টেংরা মাছ" },
                 category: "main",
                 price: { en: "৳100", bn: "৳১০০" },
@@ -954,7 +955,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 12,
                 title: { en: "Climbing Perch Fish Curry", bn: "কই মাছ" },
                 category: "main",
                 price: { en: "৳120", bn: "৳১২০" },
@@ -963,7 +964,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 13,
                 title: { en: "Little Fish Curry", bn: "ছোট মাছ" },
                 category: "main",
                 price: { en: "৳60", bn: "৳৬০" },
@@ -972,7 +973,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 14,
                 title: { en: "Chela Fish", bn: "চেলা মাছ" },
                 category: "main",
                 price: { en: "৳80", bn: "৳৮০" },
@@ -981,7 +982,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 15,
                 title: { en: "Shrimp Fish Curry", bn: "চিংড়ি মাছ" },
                 category: "main",
                 price: { en: "৳120", bn: "৳১২০" },
@@ -990,7 +991,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 16,
                 title: { en: "Egg Curry", bn: "ডিম" },
                 category: "main",
                 price: { en: "৳30", bn: "৳৩০" },
@@ -999,7 +1000,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 17,
                 title: { en: "Mashed", bn: "ভর্তা" },
                 category: "main",
                 price: { en: "৳20", bn: "৳২০" },
@@ -1008,16 +1009,16 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 18,
                 title: { en: "Fried Eggplant", bn: "বেগুন ভাজা" },
                 category: "main",
-                price: { en: "৳", bn: "৳" },
+                price: { en: "৳20", bn: "৳২০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/_mcreZLyjlw/maxresdefault.jpg",
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 19,
                 title: { en: "Dry Fried Bittergourd", bn: "করলা ভাজি" },
                 category: "main",
                 price: { en: "৳30", bn: "৳৩০" },
@@ -1026,7 +1027,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 20,
                 title: { en: "Dry Fried Cauliflower", bn: "ফুলকপি ভাজি" },
                 category: "main",
                 price: { en: "৳40", bn: "৳৪০" },
@@ -1035,7 +1036,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 21,
                 title: { en: "Fried potatoes", bn: "আলু ভাজি" },
                 category: "main",
                 price: { en: "৳10", bn: "৳১০" },
@@ -1044,8 +1045,8 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
-                title: { en: "Fried Okra", bn: "ঢেঁড়স ভাজি " },
+                id: 22,
+                title: { en: "Fried Okra", bn: "ঢেঁড়স ভাজি" },
                 category: "main",
                 price: { en: "৳40", bn: "৳৪০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
@@ -1053,7 +1054,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 23,
                 title: { en: "Red Amaranth Fried", bn: "লাল শাক" },
                 category: "main",
                 price: { en: "৳20", bn: "৳২০" },
@@ -1062,7 +1063,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
+                id: 24,
                 title: { en: "Spinach Fried", bn: "পালং শাক" },
                 category: "main",
                 price: { en: "৳20", bn: "৳২০" },
@@ -1071,115 +1072,7 @@
                 desc: { en: "", bn: "" }
             },
             {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
-                title: { en: "", bn: "" },
-                category: "main",
-                price: { en: "৳", bn: "৳" },
-                spicy: { en: "", bn: "" },
-                img: "",
-                desc: { en: "", bn: "" }
-            },
-            {
-                id: 1,
+                id: 25,
                 title: { en: "Special Beef Kacchi", bn: "স্পেশাল বিফ কাচ্চি" },
                 category: "main",
                 price: { en: "৳350", bn: "৳৩৫০" },
@@ -1188,7 +1081,7 @@
                 desc: { en: "Perfect kacchi of aromatic basmati rice and butter-soft beef.", bn: "সুগন্ধি বাসমতী চাল ও মাখনের মতো নরম গরুর মাংসের পারফেক্ট কাচ্চি।" }
             },
             {
-                id: 2,
+                id: 26,
                 title: { en: "Smoky Beef Burger", bn: "স্মোকি বিফ বার্গার" },
                 category: "snacks",
                 price: { en: "৳240", bn: "৳২৪০" },
@@ -1197,7 +1090,7 @@
                 desc: { en: "Double cheese, BBQ sauce and homemade juicy beef patty.", bn: "ডাবল চিজ, বার্বিকিউ সস এবং ঘরের তৈরি জুসি বিফ প্যাটি।" }
             },
             {
-                id: 3,
+                id: 27,
                 title: { en: "Spicy Chicken Wings (8 pcs)", bn: "স্পাইসি চিকেন উইংস (৮ পিস)" },
                 category: "snacks",
                 price: { en: "৳280", bn: "৳২৮০" },
@@ -1206,7 +1099,7 @@
                 desc: { en: "Crispy and delicious chicken wings fried in hot chili sauce.", bn: "হট চিলি সসে ফ্রাই করা মুচমুচে ও সুস্বাদু চিকেন উইংস।" }
             },
             {
-                id: 4,
+                id: 28,
                 title: { en: "Blue Lagoon Mocktail", bn: "ব্লু লেগুন মকটেল" },
                 category: "drinks",
                 price: { en: "৳140", bn: "৳১৪০" },
@@ -1215,7 +1108,7 @@
                 desc: { en: "A wonderful cold refreshing drink of lemon, mint and soda.", bn: "লেবু, পুদিনা এবং সডার এক চমৎকার ঠাণ্ডা রিফ্রেশিং ড্রিংক।" }
             },
             {
-                id: 5,
+                id: 29,
                 title: { en: "Shahi Reshmi Jilapi & Ice Cream", bn: "শাহী রেশমি জিলপী ও আইসক্রিম" },
                 category: "dessert",
                 price: { en: "৳160", bn: "৳১৬০" },
@@ -1224,19 +1117,17 @@
                 desc: { en: "Royal combination of hot jilapi and vanilla ice cream.", bn: "গরম গরম জিলপী এবং ভ্যানিলা আইসক্রিমের রাজকীয় মেলবন্ধন।" }
             },
             {
-                id: 6,
+                id: 30,
                 title: { en: "Chicken Fried Rice Combo", bn: "চিকেন ফ্রাইড রাইস কম্বো" },
                 category: "main",
                 price: { en: "৳320", bn: "৳৩২০" },
                 spicy: { en: "🌶️ Medium Spicy", bn: "🌶️ মাঝারি ঝাল" },
                 img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80",
                 desc: { en: "Chinese fried rice with spicy chili chicken and sizzling vegetables.", bn: "চাইনিজ ফ্রাইড রাইসের সাথে স্পাইসি চিলি চিকেন ও সিজলিং ভেজিটেবল।" }
-            },
-
-
+            }
         ];
 
-        // --- REVIEWS DATA (Bilingual) ---
+        // --- REVIEWS DATA ---
         const reviews = [
             {
                 text: { 
@@ -1275,16 +1166,13 @@
             currentLang = currentLang === 'en' ? 'bn' : 'en';
             document.documentElement.lang = currentLang;
             
-            // Update toggle button labels
             const toggleText = currentLang === 'en' ? 'BN' : 'EN';
             document.getElementById('langBtnText').innerText = toggleText;
             document.getElementById('langBtnTextMobile').innerText = toggleText;
 
-            // Update Form Placeholders
             document.getElementById('resNameInput').placeholder = currentLang === 'en' ? 'e.g. Tahmid Hossain' : 'উদা: তাহমিদ হোসেন';
             document.getElementById('resReqInput').placeholder = currentLang === 'en' ? 'e.g. Window seat or birthday decoration needed...' : 'যেমন: উইন্ডো সিট বা বার্থডে ডেকোরেশন প্রয়োজন...';
 
-            // Update all static data-i18n elements
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[currentLang][key]) {
@@ -1292,7 +1180,6 @@
                 }
             });
 
-            // Re-render menu and reviews
             filterMenuItems(activeCategory, false);
             updateReviewDisplay();
         }
@@ -1403,15 +1290,53 @@
             }, 4000);
         }
 
-        // --- FORM SUBMISSIONS ---
+        // --- FORM SUBMISSIONS WITH GOOGLE SHEET & EMAIL INTEGRATION ---
         function handleReservationSubmit(e) {
             e.preventDefault();
+            
+            const formData = {
+                type: 'Table Reservation',
+                name: document.getElementById('resNameInput').value,
+                phone: e.target.querySelector('input[type="tel"]').value,
+                details: 'Date/Time: ' + e.target.querySelector('input[type="datetime-local"]').value + ' | Guests: ' + e.target.querySelector('select').value,
+                paymentOrReq: document.getElementById('resReqInput').value || 'None'
+            };
+
+            // Send to Google Sheet & Email via Apps Script Web App
+            if (GOOGLE_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                }).catch(err => console.error('Error:', err));
+            }
+
             showToast(translations[currentLang].toast_reserve);
             e.target.reset();
         }
 
         function handleOrderSubmit(e) {
             e.preventDefault();
+            
+            const formData = {
+                type: 'Online Order',
+                name: e.target.querySelector('input[type="text"]').value,
+                phone: e.target.querySelector('input[type="tel"]').value,
+                details: 'Dish: ' + document.getElementById('modalDishTitle').innerText + ' (' + document.getElementById('modalDishPrice').innerText + ') | Address: ' + e.target.querySelector('textarea').value,
+                paymentOrReq: 'Payment: ' + e.target.querySelector('select').value
+            };
+
+            // Send to Google Sheet & Email via Apps Script Web App
+            if (GOOGLE_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                }).catch(err => console.error('Error:', err));
+            }
+
             closeOrderModal();
             showToast(translations[currentLang].toast_order);
             e.target.reset();
@@ -1454,11 +1379,9 @@
 
         // --- INITIALIZATION ---
         window.onload = () => {
-            // Set initial default to English as requested
             currentLang = 'en';
             document.documentElement.lang = currentLang;
             
-            // Initialize elements
             renderMenu(menuItems);
             updateReviewDisplay();
             handleScrollReveal();
