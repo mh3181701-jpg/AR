@@ -252,7 +252,7 @@
                             <div class="text-xs text-gray-400 uppercase tracking-wider" data-i18n="stat_rating">Customer Rating</div>
                         </div>
                         <div>
-                            <div class="text-3xl font-bold font-serif text-brand-gold">15+</div>
+                            <div class="text-3xl font-bold font-serif text-brand-gold">5+</div>
                             <div class="text-xs text-gray-400 uppercase tracking-wider" data-i18n="stat_chefs">Master Chefs</div>
                         </div>
                     </div>
@@ -303,13 +303,13 @@
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="space-y-2 text-center md:text-left text-white">
                         <span class="inline-block px-3 py-1 rounded-full bg-black/20 text-xs font-bold uppercase tracking-widest text-amber-200" data-i18n="promo_tag">Limited Time Offer</span>
-                        <h2 class="text-2xl sm:text-4xl font-bold font-serif" data-i18n="promo_title">20% Off on Family Platters!</h2>
+                        <h2 class="text-2xl sm:text-4xl font-bold font-serif" data-i18n="promo_title">5% Off on Family Platters!</h2>
                         <p class="text-white/90 text-sm sm:text-base" data-i18n="promo_desc">Enjoy special discounts by using promo code on any family combo order.</p>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center gap-4">
                         <div class="bg-black/30 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/20 text-center">
                             <span class="text-xs text-amber-200 block uppercase" data-i18n="promo_code_label">Promo Code</span>
-                            <span class="text-xl font-bold tracking-widest text-white">FEAST20</span>
+                            <span class="text-xl font-bold tracking-widest text-white">FEAST5</span>
                         </div>
                         <a href="#menu" class="px-8 py-4 rounded-2xl bg-white text-brand-dark font-bold text-base hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all shadow-xl" data-i18n="promo_btn">
                             Order Now
@@ -674,7 +674,6 @@
     <!-- JAVASCRIPT LOGIC & BILINGUAL TRANSLATIONS -->
     <script>
         // --- GOOGLE SHEETS & EMAIL APPS SCRIPT URL ---
-        // Ekhane apnar deployed Google Apps Script Web App URL-ti boshaben
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwsGUd8E2ZrhFNiL6vRKtB61ziOwntvRSB6dqzpmiSs0IAe7LVqhyjPrbyL2lNV8C6aAQ/exec";
 
         // --- LANGUAGE DICTIONARY & CONFIGURATION ---
@@ -701,7 +700,7 @@
                 badge_quality: "Premium Quality",
                 badge_organic: "100% Organic",
                 promo_tag: "Limited Time Offer",
-                promo_title: "20% Off on Family Platters!",
+                promo_title: "10% Off on Family Platters!",
                 promo_desc: "Enjoy special discounts by using promo code on any family combo order.",
                 promo_code_label: "Promo Code",
                 promo_btn: "Order Now",
@@ -853,34 +852,34 @@
             }
         };
 
-        // --- DIGITAL MENU DATA ---
+        // --- DIGITAL MENU DATA (Fixed, Filled & Improved) ---
         const menuItems = [
             {
                 id: 1,
                 title: { en: "Plain Rice", bn: "সাদা ভাত" },
                 category: "main",
                 price: { en: "৳20", bn: "৳২০" },
-                spicy: { en: "", bn: "" },
+                spicy: { en: "🍚 Fresh", bn: "🍚 তাজা" },
                 img: "https://d3s8tbcesxr4jm.cloudfront.net/recipe-images/v1/simple-basmati-rice-recipe-for-the-perfect-side.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Hot and fluffy steamed rice.", bn: "গরম ও সেদ্ধ ঝরঝরে সাদা ভাত।" }
             },
             {
                 id: 2,
                 title: { en: "Beef Steak", bn: "বিফ স্টেক" },
                 category: "main",
                 price: { en: "৳850", bn: "৳৮৫০" },
-                spicy: { en: "🧈 Buttery", bn: "🧈মাখনযুক্ত" },
+                spicy: { en: "🧈 Buttery", bn: "🧈 মাখনযুক্ত" },
                 img: "https://static.vecteezy.com/system/resources/thumbnails/074/179/092/small_2x/perfectly-grilled-ribeye-steak-with-aromatic-rosemary-and-seasoning-on-a-rustic-wooden-board-photo.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Juicy grilled ribeye steak with aromatic herbs.", bn: "সুগন্ধি হার্বস দিয়ে গ্রিল করা জুসি রাইবি স্টেক।" }
             },
             {
                 id: 3,
-                title: { en: "Beef", bn: "গরুর মাংস" },
+                title: { en: "Beef Curry", bn: "গরুর মাংস" },
                 category: "main",
                 price: { en: "৳140", bn: "৳১৪০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://cdn.jugantor.com/assets/news_photos/2026/03/23/MANSER-ACAR-6867a693bb7b6-69c0c7b3e0975.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Traditional rich spicy beef curry.", bn: "ঐতিহ্যবাহী মশলাদার গরুর মাংসের ঝোল।" }
             },
             {
                 id: 4,
@@ -889,7 +888,7 @@
                 price: { en: "৳220", bn: "৳২২০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://myfoodstory.com/wp-content/uploads/2016/12/Easy-Mutton-Curry-1.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Tender mutton cooked with authentic local spices.", bn: "আসল দেশি মশলায় রান্না করা নরম খাসির মাংস।" }
             },
             {
                 id: 5,
@@ -898,7 +897,7 @@
                 price: { en: "৳150", bn: "৳১৫০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyld8ikcJnp2sBfu0V8m10SY3vJTV_kTtl_BbyJ6UYcEJYL1bBm5zMrwIK&s=10",
-                desc: { en: "", bn: "" }
+                desc: { en: "Spicy village-style roasted duck curry.", bn: "গ্রাম্য স্বাদে ঝাল ঝাল হাঁসের মাংস ভুনা।" }
             },
             {
                 id: 6,
@@ -907,7 +906,7 @@
                 price: { en: "৳100", bn: "৳১০০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://myfoodstory.com/wp-content/uploads/2024/12/Nadan-Chicken-Curry-Village-Style-Kerala-Chicken-Curry-1.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Home-style traditional chicken curry.", bn: "ঘরোয়া স্বাদের সুস্বাদু মুরগির মাংসের তরকারি।" }
             },
             {
                 id: 7,
@@ -916,7 +915,7 @@
                 price: { en: "৳50", bn: "৳৫০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/Pu6ki9y9Nug/sddefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Fresh Rohu fish cooked in light gravy.", bn: "তাজা রুই মাছের পাতলা ঝোল তরকারি।" }
             },
             {
                 id: 8,
@@ -925,7 +924,7 @@
                 price: { en: "৳150", bn: "৳১৫০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7tNJa9MXZNUOzb8caHTVUbNTPUlFbERvHJIsinekdKN6XVN2PUfySGtva&s=10",
-                desc: { en: "", bn: "" }
+                desc: { en: "Iconic Bangladeshi Hilsa cooked in mustard gravy.", bn: "সর্ষে বাটায় রান্না করা ঐতিহ্যবাহী ইলিশ মাছ।" }
             },
             {
                 id: 9,
@@ -934,7 +933,7 @@
                 price: { en: "৳80", bn: "৳৮০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.pinimg.com/736x/bf/00/36/bf003631385d8ee92f18cbd2941a2fd6.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "River Boal fish prepared with aromatic spices.", bn: "নদীর তাজা বোয়াল মাছের সুস্বাদু ঝোল।" }
             },
             {
                 id: 10,
@@ -943,7 +942,7 @@
                 price: { en: "৳120", bn: "৳১২০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/trl8RhMP6gg/maxresdefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Delicious traditional spiny eel fish curry.", bn: "মজাদার ঐতিহ্যবাহী গুচি মাছের ভুনা।" }
             },
             {
                 id: 11,
@@ -952,7 +951,7 @@
                 price: { en: "৳100", bn: "৳১০০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/GlICFP6ZGX8/sddefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Small Tengara catfish cooked with tomato and green chillies.", bn: "টমেটো ও কাঁচা মরিচ দিয়ে টেংরা মাছের পাতলা ঝোল।" }
             },
             {
                 id: 12,
@@ -961,7 +960,7 @@
                 price: { en: "৳120", bn: "৳১২০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://www.radiotodaynews.com/media/imgAll/2021June/IMG_20221012_203844_725_x_407_pixel-2210122050.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Traditional spicy Climbing Perch fish recipe.", bn: "ঐতিহ্যবাহী মশলাদার কই মাছের তেল ঝাল।" }
             },
             {
                 id: 13,
@@ -970,7 +969,7 @@
                 price: { en: "৳60", bn: "৳৬০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5PPyn13SLZGTVjy74AfS093W_GQtFG5HtWBTAgoZlq9rqMqOGHXQm_1Q&s=10",
-                desc: { en: "", bn: "" }
+                desc: { en: "Mixed small river fish cooked with vegetables.", bn: "সবজি দিয়ে মাখানো ছোট মাছের চচ্চড়ি।" }
             },
             {
                 id: 14,
@@ -979,34 +978,34 @@
                 price: { en: "৳80", bn: "৳৮০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/FpAvgjTkam4/maxresdefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Crispy and spicy local Chela fish.", bn: "মুচমুচে ও ঝাল ঝাল স্থানীয় চেলা মাছ।" }
             },
             {
                 id: 15,
-                title: { en: "Shrimp Fish Curry", bn: "চিংড়ি মাছ" },
+                title: { en: "Shrimp Fish Curry", bn: "চিংড়ি মাছের মালাই কারি" },
                 category: "main",
                 price: { en: "৳120", bn: "৳১২০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.pinimg.com/1200x/54/96/30/549630035adf8fc5766891fabf08cbff.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Creamy coconut milk shrimp curry.", bn: "নারিকেলের দুধ দিয়ে রান্না করা সুস্বাদু চিংড়ি কারি।" }
             },
             {
                 id: 16,
-                title: { en: "Egg Curry", bn: "ডিম" },
+                title: { en: "Egg Curry", bn: "ডিম ভুনা" },
                 category: "main",
                 price: { en: "৳30", bn: "৳৩০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.pinimg.com/736x/3e/10/41/3e1041847c64430b310d6fd3cae14d61.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Boiled eggs cooked in rich onion-tomato gravy.", bn: "ঘন পেঁয়াজ-টমেটো গ্রেভিতে রান্না করা ডিম।" }
             },
             {
                 id: 17,
-                title: { en: "Mashed", bn: "ভর্তা" },
+                title: { en: "Mashed Bhorta Platter", bn: "নানা পদের ভর্তা" },
                 category: "main",
                 price: { en: "৳20", bn: "৳২০" },
-                spicy: { en: "🧈 Buttery", bn: "🧈মাখনযুক্ত" },
+                spicy: { en: "🧈 Buttery", bn: "🧈 ভর্তা স্পেশাল" },
                 img: "https://i.pinimg.com/736x/7b/75/2a/7b752a271212b1e39090ce8661fbfde1.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Traditional spicy mashed items with mustard oil.", bn: "সর্ষের তেল ও শুকনা মরিচ দিয়ে তৈরি ঐতিহ্যবাহী ভর্তা।" }
             },
             {
                 id: 18,
@@ -1015,7 +1014,7 @@
                 price: { en: "৳20", bn: "৳২০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/_mcreZLyjlw/maxresdefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Crispy pan-fried eggplant slices.", bn: "মচমচে করে ভাজা বেগুন স্লাইস।" }
             },
             {
                 id: 19,
@@ -1024,7 +1023,7 @@
                 price: { en: "৳30", bn: "৳৩০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/CQVzikJrrD8/maxresdefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Crispy fried bitter gourd with onions.", bn: "পেঁয়াজ দিয়ে মুচমুচে করে ভাজা করলা।" }
             },
             {
                 id: 20,
@@ -1033,7 +1032,7 @@
                 price: { en: "৳40", bn: "৳৪০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/URPQc3pydZ4/maxresdefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Fresh cauliflower stir-fry with spices.", bn: "মশলা দিয়ে ভাজা তাজা ফুলকপি ভাজি।" }
             },
             {
                 id: 21,
@@ -1042,7 +1041,7 @@
                 price: { en: "৳10", bn: "৳১০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://i.ytimg.com/vi/KTJgTzTZEzs/maxresdefault.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Thinly sliced crispy fried potatoes.", bn: "চিকন করে কাটা মুচমুচে আলু ভাজি।" }
             },
             {
                 id: 22,
@@ -1051,37 +1050,352 @@
                 price: { en: "৳40", bn: "৳৪০" },
                 spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
                 img: "https://www.allbdrecipe.com/Images/Article/Img_2020917_102840_903.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Tender okra stir-fried with green chillies.", bn: "কাঁচা মরিচ দিয়ে ভাজা নরম ও সুস্বাদু ঢেঁড়স।" }
             },
             {
                 id: 23,
-                title: { en: "Red Amaranth Fried", bn: "লাল শাক" },
+                title: { en: "Red Amaranth Fried", bn: "লাল শাক ভাজি" },
                 category: "main",
                 price: { en: "৳20", bn: "৳২০" },
-                spicy: { en: "", bn: "" },
+                spicy: { en: "🌿 Healthy", bn: "🌿 পুষ্টিকর" },
                 img: "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2025/11/sakITG-1763904951094.jpg?size=*:900",
-                desc: { en: "", bn: "" }
+                desc: { en: "Healthy stir-fried red amaranth greens.", bn: "রসুন ও পেঁয়াজ দিয়ে ভাজা পুষ্টিকর লাল শাক।" }
             },
             {
                 id: 24,
-                title: { en: "Spinach Fried", bn: "পালং শাক" },
+                title: { en: "Spinach Fried", bn: "পালং শাক ভাজি" },
                 category: "main",
                 price: { en: "৳20", bn: "৳২০" },
-                spicy: { en: "", bn: "" },
+                spicy: { en: "🌿 Fresh", bn: "🌿 তাজা" },
                 img: "https://ajinomotobangladesh.com/wp-content/uploads/2023/01/2-1024x768.jpg",
-                desc: { en: "", bn: "" }
+                desc: { en: "Fresh stir-fried spinach leaves.", bn: "তাজা পালং শাক ভাজি।" }
             },
             {
                 id: 25,
+                title: { en: "Salad", bn: "সালাদ" },
+                category: "snacks",
+                price: { en: "৳10", bn: "৳১০" },
+                spicy: { en: "🥗 Fresh", bn: "🥗 ফ্রেশ" },
+                img: "https://cdn.jugantor.com/assets/news_photos/2026/03/27/cucumber-salad-69c67ad09f23a.png",
+                desc: { en: "Fresh garden vegetable salad with lemon dressing.", bn: "লেবুর রস ও তাজা সবজির মিশ্রণে তৈরি ফ্রেশ সালাদ।" }
+            },
+            {
+                id: 26,
+                title: { en: "Mixed Salad", bn: "মিক্সড সালাদ" },
+                category: "snacks",
+                price: { en: "৳20", bn: "৳20" },
+                spicy: { en: "🥗 Fresh", bn: "🥗 ফ্রেশ" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVTIofUF43ULAgRDH5-amUBIdE83c_9zryPM053yOs6ZmpeCA2xiVEd9Xe&s=10",
+                desc: { en: "Fresh garden vegetable salad with lemon dressing.", bn: "লেবুর রস ও তাজা সবজির মিশ্রণে তৈরি ফ্রেশ সালাদ।" }
+            },
+            {
+                id: 27,
+                title: { en: "Special Mixed Salad", bn: "স্পেশাল মিক্সড সালাদ" },
+                category: "snacks",
+                price: { en: "৳30", bn: "৳৩০" },
+                spicy: { en: "🥗 Fresh", bn: "🥗 ফ্রেশ" },
+                img: "https://play-lh.googleusercontent.com/QM37aJY0vFH9912kpAnN_gTqPDMLRRESB9-ROnoXWQjghn8510k5wt6bz5BVn4cR2mFGvG659PElWtxOA1Vo61I",
+                desc: { en: "Fresh garden vegetable salad with lemon dressing.", bn: "লেবুর রস ও তাজা সবজির মিশ্রণে তৈরি ফ্রেশ সালাদ।" }
+            },
+            {
+                id: 28,
+                title: { en: "Shingara", bn: "সিঙ্গারা" },
+                category: "snacks",
+                price: { en: "৳10", bn: "৳১০" },
+                spicy: { en: "🥟 Crispy", bn: "🥟 মুচমুচে" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8i-3Vvj8zFKIoq5fcsvRfZmJ9MLgB2Yzv6o1t1CAaB-orcONlhISZbO4H&s=10",
+                desc: { en: "Crispy triangular snack filled with potatoes.", bn: "আলু পুর ভরা মুচমুচে গরম সিঙ্গারা।" }
+            },
+            {
+                id: 29,
+                title: { en: "Samosa", bn: "সমুচা" },
+                category: "snacks",
+                price: { en: "৳15", bn: "৳১৫" },
+                spicy: { en: "🥟 Snack", bn: "🥟 নাস্তা" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW0xtm1vup-xHaTKFnCbo8Tzu03dzi0Vwt7hqLZlqjvA&s=10",
+                desc: { en: "Crispy meat or veg samosa.", bn: "সুস্বাদু ও মচমচে সমুচা।" }
+            },
+            {
+                id: 30,
+                title: { en: "Puri", bn: "পুরি" },
+                category: "snacks",
+                price: { en: "৳10", bn: "৳১০" },
+                spicy: { en: "🫓 Fluffy", bn: "🫓 ফুলকো" },
+                img: "https://i.ytimg.com/vi/SqAjdqoEEMo/maxresdefault.jpg",
+                desc: { en: "Fluffy deep fried bread.", bn: "গরম ও ফুলকো পুরি।" }
+            },
+            {
+                id: 31,
+                title: { en: "Potato Patty", bn: "আলুর চপ" },
+                category: "snacks",
+                price: { en: "৳10", bn: "৳১০" },
+                spicy: { en: "🥔 Spicy", bn: "🥔 মশলাদার" },
+                img: "https://upload.wikimedia.org/wikipedia/commons/a/ae/%E0%A6%86%E0%A6%B2%E0%A7%81%E0%A6%B0_%E0%A6%9A%E0%A6%AA.jpg",
+                desc: { en: "Spicy potato chop.", bn: "মশলাদার আলুর চপ।" }
+            },
+            {
+                id: 32,
+                title: { en: "Egg patty", bn: "ডিম চপ" },
+                category: "snacks",
+                price: { en: "৳15", bn: "৳১৫" },
+                spicy: { en: "🥚 Tasty", bn: "🥚 সুস্বাদু" },
+                img: "https://i.ytimg.com/vi/uXOE-UUOJDY/maxresdefault.jpg",
+                desc: { en: "Boiled egg coated with potato and fried.", bn: "ডিম দিয়ে তৈরি চপ।" }
+            },
+            {
+                id: 33,
+                title: { en: "Chicken Chop", bn: "চিকেন চপ" },
+                category: "snacks",
+                price: { en: "৳25", bn: "৳২৫" },
+                spicy: { en: "🍗 Crunchy", bn: "🍗 ক্রাঞ্চি" },
+                img: "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2023/11/chop-10.jpg?size=*:900",
+                desc: { en: "Crispy chicken chop.", bn: "মচমচে চিকেন চপ।" }
+            },
+            {
+                id: 34,
+                title: { en: "Onion Fritter", bn: "পিয়াজু" },
+                category: "snacks",
+                price: { en: "৳10", bn: "৳১০" },
+                spicy: { en: "🧅 Crunchy", bn: "🧅 মুচমুচে" },
+                img: "https://i.ytimg.com/vi/4GbKCE_K1As/sddefault.jpg",
+                desc: { en: "Crispy lentil and onion fritters.", bn: "মচমচে পেঁয়াজু।" }
+            },
+            {
+                id: 35,
+                title: { en: "Brinjal Fritter", bn: "বেগুনি" },
+                category: "snacks",
+                price: { en: "৳10", bn: "৳১০" },
+                spicy: { en: "🍆 Hot", bn: "🍆 গরম" },
+                img: "https://assets.telegraphindia.com/abp/2026/Aug/1786461970_beguni-lead-jpg.jpeg",
+                desc: { en: "Crispy fried eggplant slice.", bn: "গরম গরম মুচমুচে বেগুনি।" }
+            },
+            {
+                id: 36,
+                title: { en: "Mughlai", bn: "মোগলাই" },
+                category: "snacks",
+                price: { en: "৳50", bn: "৳৫০" },
+                spicy: { en: "🍳 Rich", bn: "🍳 শাহী" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTOIhYUcmjrR8AOEgXl4pCi2KWpJjINnRtHT8MtqAZbh5ltkFuy5UEreuE&s=10",
+                desc: { en: "Rich egg-stuffed paratha.", bn: "ডিম ও মাংসের কিমা ভরা মোগলাই পরোটা।" }
+            },
+            {
+                id: 37,
+                title: { en: "Black Tea", bn: "রং চা" },
+                category: "drinks",
+                price: { en: "৳10", bn: "৳১০" },
+                spicy: { en: "☕ Hot", bn: "☕ গরম" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwY1s2kORWH43BQ6VI4ADSLWI5UhCJKVAdfkK9ZA7xPGcKNMb6Y0mBHXOY&s=10",
+                desc: { en: "Hot black tea.", bn: "গরম রং চা।" }
+            },
+            {
+                id: 38,
+                title: { en: "Milk Tea", bn: "দুধ চা" },
+                category: "drinks",
+                price: { en: "৳15", bn: "৳১৫" },
+                spicy: { en: "🥛 Creamy", bn: "🥛 ক্রিমি" },
+                img: "https://media.prothomalo.com/prothomalo-bangla/2024-03/19d4abea-9acb-46ea-b747-a2e922ba6c41/prothomalo_bangla_2022_12_7611239c_b22b_4710_b3ad_6ced0cd72641_WhatsApp_Image_2022_12_17_at_15_36_55.jpeg?w=1200&h=675&auto=format%2Ccompress&fit=max",
+                desc: { en: "Traditional milk tea.", bn: "ঐতিহ্যবাহী দুধ চা।" }
+            },
+            {
+                id: 39,
+                title: { en: "Lemon Tea", bn: "লেবু চা" },
+                category: "drinks",
+                price: { en: "৳12", bn: "৳১২" },
+                spicy: { en: "🍋 Refreshing", bn: "🍋 সতেজ" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOQ_3OwYhzqrhq7ElHSil1jP4kxn_CFT7Ls4tjN05NPdXxTgmkq_Jfcis&s=10",
+                desc: { en: "Refreshing lemon tea.", bn: "রিফ্রেশিং লেবু চা।" }
+            },
+            {
+                id: 40,
+                title: { en: "Black Coffee", bn: "কফি" },
+                category: "drinks",
+                price: { en: "৳30", bn: "৳৩০" },
+                spicy: { en: "☕ Strong", bn: "☕ স্ট্রং" },
+                img: "https://bodevolvebariatric.com/wp-content/uploads/2026/07/Black-Coffee-for-Weight-Loss.png",
+                desc: { en: "Hot black coffee.", bn: "গরম ব্ল্যাক কফি।" }
+            },
+            {
+                id: 41,
+                title: { en: "Milk Coffee", bn: "দুধ কফি" },
+                category: "drinks",
+                price: { en: "৳40", bn: "৳৪০" },
+                spicy: { en: "☕ Sweet", bn: "☕ মিষ্টি" },
+                img: "https://www.thespruceeats.com/thmb/48wEw5d9xwXRxyozxakJO59waKI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Cafeconleche-56fcf86e5f9b586195b73dbf.JPG",
+                desc: { en: "Hot creamy milk coffee.", bn: "ক্রিমি দুধ কফি।" }
+            },
+            {
+                id: 42,
+                title: { en: "Cold Coffee", bn: "কোল্ড কফি" },
+                category: "drinks",
+                price: { en: "৳50", bn: "৳৫০" },
+                spicy: { en: "❄️ Chilled", bn: "❄️ ঠান্ডা" },
+                img: "https://img.magnific.com/free-photo/iced-coffee-splashing-glass_84443-83671.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Chilled cold coffee.", bn: "ঠান্ডা কোল্ড কফি।" }
+            },
+            {
+                id: 43,
+                title: { en: "Sweet Lacchi", bn: "লাচ্ছি" },
+                category: "drinks",
+                price: { en: "৳50", bn: "৳৫০" },
+                spicy: { en: "🥛 Sweet", bn: "🥛 মিষ্টি" },
+                img: "https://shajgoj.com/storage/media/2026/05/cc445cac-82e9-441c-b9ee-0f7fd0cb2011.jpg",
+                desc: { en: "Sweet yogurt lassi.", bn: "মিষ্টি লাচ্ছি।" }
+            },
+            {
+                id: 44,
+                title: { en: "Borhani", bn: "বোরহানি" },
+                category: "drinks",
+                price: { en: "৳60", bn: "৳৬০" },
+                spicy: { en: "🥛 Spiced", bn: "🥛 মশলাদার" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF6VpXbjosuAlI4T_fIHtiBKnU6jRE0Tfub0ai5IRflw&s=10",
+                desc: { en: "Spicy yogurt drink.", bn: "মশলাদার বোরহানি।" }
+            },
+            {
+                id: 45,
+                title: { en: "Sweet Firni", bn: "ফিরনি" },
+                category: "dessert",
+                price: { en: "৳70", bn: "৳৭০" },
+                spicy: { en: "🥣 Sweet", bn: "🥣 মিষ্টি" },
+                img: "https://i.ytimg.com/vi/UnZ45FVolIg/maxresdefault.jpg",
+                desc: { en: "Traditional sweet firni.", bn: "ঐতিহ্যবাহী মিষ্টি ফিরনি।" }
+            },
+            {
+                id: 46,
+                title: { en: "Halim", bn: "হালিম" },
+                category: "main",
+                price: { en: "৳70", bn: "৳৭০" },
+                spicy: { en: "🌶️ Stuffed", bn: "🌶️ পুরভরা" },
+                img: "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2025/03/mutton-halim-12ITG-1741184681776.jpg?size=*:900",
+                desc: { en: "Rich meat and lentil stew.", bn: "মাংস ও ডালের সুস্বাদু হালিম।" }
+            },
+            {
+                id: 47,
                 title: { en: "Special Beef Kacchi", bn: "স্পেশাল বিফ কাচ্চি" },
                 category: "main",
                 price: { en: "৳350", bn: "৳৩৫০" },
                 spicy: { en: "🌶️ Medium Spicy", bn: "🌶️ মাঝারি ঝাল" },
-                img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+                img: "https://i.ytimg.com/vi/izy6HqQ4Kb4/maxresdefault.jpg",
                 desc: { en: "Perfect kacchi of aromatic basmati rice and butter-soft beef.", bn: "সুগন্ধি বাসমতী চাল ও মাখনের মতো নরম গরুর মাংসের পারফেক্ট কাচ্চি।" }
             },
             {
-                id: 26,
+                id: 48,
+                title: { en: "Morog Polao", bn: "মোরগ পোলাও" },
+                category: "main",
+                price: { en: "৳280", bn: "৳২৮০" },
+                spicy: { en: "🌶️ Medium Spicy", bn: "🌶️ মাঝারি ঝাল" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCmimWQm74YhUx7rIU1G12gDccm_DNtIDQWzOQuSiGSr4CTmz2IwDYks0&s=10",
+                desc: { en: "Aromatic polao rice served with tender chicken roast.", bn: "সুগন্ধি পোলাও চালের সাথে সুস্বাদু চিকেন রোস্ট।" }
+            },
+            {
+                id: 49,
+                title: { en: "Mutton Tehari", bn: "খাসির তেহারি" },
+                category: "main",
+                price: { en: "৳260", bn: "৳২৬০" },
+                spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLd3xyWEH9eqLBATNmNIW7b63cddyXppkQ48zmjBbdJ1J7p2bO-hxv7Jg&s=10",
+                desc: { en: "Traditional mustard-oil flavored mutton tehari.", bn: "সর্ষের তেলের ঘ্রাণযুক্ত ঐতিহ্যবাহী খাসির তেহারি।" }
+            },
+            {
+                id: 50,
+                title: { en: "Beef Bhuna Khichuri", bn: "ভুনা খিচুড়ি ও গরুর মাংস" },
+                category: "main",
+                price: { en: "৳300", bn: "৳৩০০" },
+                spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
+                img: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Spicy moong dal khichuri served with rich beef bhuna.", bn: "মাসালাদার মুগ ডালের খিচুড়ির সাথে গরুর মাংস ভুনা।" }
+            },
+            {
+                id: 51,
+                title: { en: "Vegetable Fried Rice", bn: "ভেজিটেবল ফ্রাইড রাইস" },
+                category: "main",
+                price: { en: "৳200", bn: "৳২০০" },
+                spicy: { en: "🌿 Healthy", bn: "🌿 হেলদি" },
+                img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Rice cooked with assorted garden-fresh vegetables.", bn: "নানাবিধ তাজা সবজি দিয়ে রান্না করা ফ্রাইড রাইস।" }
+            },
+            {
+                id: 52,
+                title: { en: "Chicken Fried Rice Combo", bn: "চিকেন ফ্রাইড রাইস কম্বো" },
+                category: "main",
+                price: { en: "৳320", bn: "৳৩২০" },
+                spicy: { en: "🌶️ Medium Spicy", bn: "🌶️ মাঝারি ঝাল" },
+                img: "https://img.magnific.com/free-photo/fried-rice-served-with-hot-syrup_157027-4061.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Chinese fried rice with spicy chili chicken and sizzling vegetables.", bn: "চাইনিজ ফ্রাইড রাইসের সাথে স্পাইসি চিলি চিকেন ও সিজলিং ভেজিটেবল।" }
+            },
+            {
+                id: 53,
+                title: { en: "Chicken Biryani", bn: "চিকেন বিরিয়ানি" },
+                category: "main",
+                price: { en: "৳250", bn: "৳২৫০" },
+                spicy: { en: "🌶️ Medium", bn: "🌶️ মাঝারি ঝাল" },
+                img: "https://static.vecteezy.com/system/resources/previews/072/718/687/large_2x/steaming-hyderabadi-biryani-aromatic-cinematic-food-journey-photo.jpg",
+                desc: { en: "Fragrant basmati rice cooked with succulent chicken pieces.", bn: "সুগন্ধি বাসমতী চাল ও জুসি চিকেনের ঐতিহ্যবাহী বিরিয়ানি।" }
+            },
+            {
+                id: 54,
+                title: { en: "Mutton Biryani", bn: "খাসির বিরিয়ানি" },
+                category: "main",
+                price: { en: "৳340", bn: "৳৩৪০" },
+                spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
+                img: "https://thebetterchicken.com/cdn/shop/articles/image1_b9c0b323-ccc0-4665-9878-50dc19cb48e3.webp?v=1789996383",
+                desc: { en: "Rich royal mutton biryani with slow-cooked meat.", bn: "ধীরে রান্না করা খাসির মাংসের রাজকীয় বিরিয়ানি।" }
+            },
+            {
+                id: 55,
+                title: { en: "Egg Fried Rice", bn: "ডিম ফ্রাইড রাইস" },
+                category: "main",
+                price: { en: "৳210", bn: "৳২১০" },
+                spicy: { en: "🥚 Classic", bn: "🥚 ক্লাসিক" },
+                img: "https://media-cdn2.greatbritishchefs.com/media/ehylzcva/gbc_freshlay_oct25-19.whqc_768x512q90.jpg",
+                desc: { en: "Simple fried rice tossed with scrambled eggs.", bn: "ঝুরঝুরে ডিম ও চালের সাধারণ ফ্রাইড রাইস।" }
+            },
+            {
+                id: 56,
+                title: { en: "Mixed Fried Rice", bn: "মিক্সড ফ্রাইড রাইস" },
+                category: "main",
+                price: { en: "৳380", bn: "৳৩৮০" },
+                spicy: { en: "🌶️ Special", bn: "🌶️ স্পেশাল" },
+                img: "https://img.magnific.com/free-photo/delicious-fried-rice-with-fresh-vegetables-dark-stone_84443-72453.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Loaded with chicken, beef, prawns and eggs.", bn: "চিকেন, বিফ, চিংড়ি ও ডিমের সমন্বয়ে ভরপুর মিক্সড রাইস।" }
+            },
+            {
+                id: 68,
+                title: { en: "Prawn Fried Rice", bn: "প্রন ফ্রাইড রাইস" },
+                category: "main",
+                price: { en: "৳350", bn: "৳৩৫০" },
+                spicy: { en: "🌶️ Mild", bn: "🌶️ হালকা ঝাল" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAi79T-r9rAkew3ab8ACOQ0NX-EXoXKBYMr022PQ2WfzlBTxKHvUi6ggXl&s=10",
+                desc: { en: "Delicious fried rice tossed with fresh prawns and veggies.", bn: "তাজা চিংড়ি ও সবজি দিয়ে ভাজা সুস্বাদু ফ্রাইড রাইস।" }
+            },
+            {
+                id: 57,
+                title: { en: "Chicken Cheese Pizza", bn: "চিকেন চিজ পিৎজা" },
+                category: "snacks",
+                price: { en: "৳450", bn: "৳৪৫০" },
+                spicy: { en: "🧀 Cheesy", bn: "🧀 চিজি" },
+                img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Loaded with mozzarella cheese, chicken chunks and herbs.", bn: "মোজারেলা চিজ, চিকেন ও হার্বসে ভরপুর সুস্বাদু পিৎজা।" }
+            },
+            {
+                id: 58,
+                title: { en: "BBQ Chicken Pizza", bn: "বারবিকিউ চিকেন পিৎজা" },
+                category: "snacks",
+                price: { en: "৳480", bn: "৳৪৮০" },
+                spicy: { en: "🔥 Smoky", bn: "🔥 স্মোকি" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNsTYIVzgahgNBHZ5_TAEoe4Se5KVBPBdjyrqmBfRRcF69BBQhH6LvXAsL&s=10",
+                desc: { en: "Pizza topped with BBQ chicken chunks and melted mozzarella.", bn: "বারবিকিউ চিকেন ও গলানো মোজারেলা চিজের পিৎজা।" }
+            },
+            {
+                id: 59,
+                title: { en: "Mushroom Lovers Pizza", bn: "মাশরুম লাভার্স পিৎজা" },
+                category: "snacks",
+                price: { en: "৳420", bn: "৳৪২০" },
+                spicy: { en: "🍄 Mushroom", bn: "🍄 মাশরুমযুক্ত" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaLPlnC3V3N6HvuOPqwbh9muE2b8WT1q96fr3L41dM0yKqtWB2bA6DZYt3&s=10",
+                desc: { en: "Loaded with fresh button mushrooms and cheese.", bn: "তাজা মাশরুম ও চিজের সুস্বাদু কম্বো পিৎজা।" }
+            },
+            {
+                id: 60,
                 title: { en: "Smoky Beef Burger", bn: "স্মোকি বিফ বার্গার" },
                 category: "snacks",
                 price: { en: "৳240", bn: "৳২৪০" },
@@ -1090,7 +1404,34 @@
                 desc: { en: "Double cheese, BBQ sauce and homemade juicy beef patty.", bn: "ডাবল চিজ, বার্বিকিউ সস এবং ঘরের তৈরি জুসি বিফ প্যাটি।" }
             },
             {
-                id: 27,
+                id: 61,
+                title: { en: "Zurger Burger", bn: "জার্গার স্পেশাল বার্গার" },
+                category: "snacks",
+                price: { en: "৳290", bn: "৳২৯০" },
+                spicy: { en: "🍔 Extra Loaded", bn: "🍔 ভরপুর লোডেড" },
+                img: "https://img.magnific.com/free-photo/grilled-cheeseburger-rustic-bun-with-fries-generative-ai_188544-36959.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Thick chicken patty with extra cheese and secret mayo.", bn: "অতিরিক্ত চিজ ও স্পেশাল মায়োসহ থিক চিকেন প্যাটি বার্গার।" }
+            },
+            {
+                id: 62,
+                title: { en: "Double Patty Beef Burger", bn: "ডাবল প্যাটি বিফ বার্গার" },
+                category: "snacks",
+                price: { en: "৳350", bn: "৳৩৫০" },
+                spicy: { en: "🥩 Heavy", bn: "🥩 হেভি" },
+                img: "https://img.pikbest.com/photo/20240718/double-patty-beef-burger-with-melting-cheese_10674189.jpg!bw700",
+                desc: { en: "Two juicy beef patties stacked with double cheese.", bn: "ডাবল চিজ ও দুটি জুসি বিফ প্যাটি দিয়ে তৈরি হেভি বার্গার।" }
+            },
+            {
+                id: 67,
+                title: { en: "Chicken Momos (6 pcs)", bn: "চিকেন মোমো (৬ পিস)" },
+                category: "snacks",
+                price: { en: "৳180", bn: "৳১৮০" },
+                spicy: { en: "🌶️ Spicy Dip", bn: "🌶️ স্পাইসি সস" },
+                img: "https://img.magnific.com/free-photo/steaming-asian-dumplings-dark-plate_84443-82009.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Steamed dumplings stuffed with minced chicken, served with spicy dip.", bn: "কিমা করা মুরগির মাংসের ভাপানো মোমো, ঝাল সসের সাথে পরিবেশিত।" }
+            },
+            {
+                id: 63,
                 title: { en: "Spicy Chicken Wings (8 pcs)", bn: "স্পাইসি চিকেন উইংস (৮ পিস)" },
                 category: "snacks",
                 price: { en: "৳280", bn: "৳২৮০" },
@@ -1099,31 +1440,177 @@
                 desc: { en: "Crispy and delicious chicken wings fried in hot chili sauce.", bn: "হট চিলি সসে ফ্রাই করা মুচমুচে ও সুস্বাদু চিকেন উইংস।" }
             },
             {
-                id: 28,
+                id: 64,
+                title: { en: "French Fries", bn: "ফ্রেঞ্চ ফ্রাই" },
+                category: "snacks",
+                price: { en: "৳130", bn: "৳১৩০" },
+                spicy: { en: "🍟 Crispy", bn: "🍟 মুচমুচে" },
+                img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Crispy golden potato fries served with tomato sauce.", bn: "টমেটো সসের সাথে সোনালী মুচমুচে ফ্রেঞ্চ ফ্রাই।" }
+            },
+            {
+                id: 65,
+                title: { en: "Club Sandwich", bn: "ক্লাব স্যান্ডউইচ" },
+                category: "snacks",
+                price: { en: "৳200", bn: "৳২০০" },
+                spicy: { en: "🥪 Delicious", bn: "🥪 সুস্বাদু" },
+                img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Triple-decker sandwich with chicken, egg and fresh veggies.", bn: "চিকেন, ডিম ও তাজা সবজি দিয়ে তৈরি ট্রিপল লেয়ার স্যান্ডউইচ।" }
+            },
+            {
+                id: 66,
+                title: { en: "Chicken Sandwich", bn: "চিকেন স্যান্ডউইচ" },
+                category: "snacks",
+                price: { en: "৳150", bn: "৳১৫০" },
+                spicy: { en: "🥪 Simple", bn: "🥪 সাধারণ" },
+                img: "https://img.magnific.com/free-photo/grilled-chicken-sandwich-with-melted-cheese-arugula-wooden-board_84443-94419.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Grilled sandwich filled with shredded chicken and mayo.", bn: "ঝুরি করা চিকেন ও মায়োনিজ ভরা গ্রিলড স্যান্ডউইচ।" }
+            },
+            
+            
+            {
+                id: 69,
+                title: { en: "Beef Chowmein", bn: "বিফ চাউমিন" },
+                category: "main",
+                price: { en: "৳260", bn: "৳২৬০" },
+                spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
+                img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Stir-fried noodles with tender beef slices and sauces.", bn: "নরম বিফ স্লাইস ও সস দিয়ে ভাজা নুডলস।" }
+            },
+            {
+                id: 70,
+                title: { en: "Chicken Chowmein", bn: "চিকেন চাউমিন" },
+                category: "main",
+                price: { en: "৳220", bn: "৳২২০" },
+                spicy: { en: "🌶️ Mild", bn: "🌶️ হালকা ঝাল" },
+                img: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Classic stir-fried noodles with shredded chicken.", bn: "ঝুরি করা চিকেন দিয়ে তৈরি ক্লাসিক চাউমিন।" }
+            },
+            {
+                id: 71,
+                title: { en: "Chicken Sizzling", bn: "চিকেন সিজলিং" },
+                category: "main",
+                price: { en: "৳420", bn: "৳৪২০" },
+                spicy: { en: "🔥 Sizzling Hot", bn: "🔥 সিজলিং হট" },
+                img: "https://img.magnific.com/free-photo/glazed-grilled-chicken-thighs-plate_84443-85870.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Hot sizzling chicken chunks served in special gravy.", bn: "স্পেশাল গ্রেভিতে পরিবেশিত গরম সিজলিং চিকেন।" }
+            },
+            {
+                id: 72,
+                title: { en: "Beef Chili Dry", bn: "বিফ চিলি ড্রাই" },
+                category: "main",
+                price: { en: "৳360", bn: "৳৩৬০" },
+                spicy: { en: "🌶️🌶️ Very Spicy", bn: "🌶️🌶️ অতিরিক্ত ঝাল" },
+                img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+                desc: { en: "Crispy beef stir-fried with capsicum and green chilies.", bn: "ক্যাপসিকাম ও কাঁচা মরিচ দিয়ে ভাজা ক্রিস্পি বিফ চিলি।" }
+            },
+            {
+                id: 73,
+                title: { en: "Chicken Chili Onion", bn: "চিকেন চিলি অনিয়ন" },
+                category: "main",
+                price: { en: "৳320", bn: "৳৩২০" },
+                spicy: { en: "🌶️ Spicy", bn: "🌶️ ঝাল" },
+                img: "https://t3.ftcdn.net/jpg/09/43/87/72/360_F_943877268_Q6tjM8uPJWhOaiWqqd8BZj2GSIdYt785.jpg",
+                desc: { en: "Juicy chicken pieces with large onion cubes and peppers.", bn: "বড় পেঁয়াজ ও মরিচের টুকরোসহ জুসি চিকেন চিলি।" }
+            },
+            {
+                id: 74,
+                title: { en: "Tandoori Roti", bn: "তান্দুরি রুটি" },
+                category: "main",
+                price: { en: "৳30", bn: "৳৩০" },
+                spicy: { en: "🫓 Soft", bn: "🫓 নরম" },
+                img: "https://img.magnific.com/free-photo/delicious-composition-nutritious-roti_23-2149033957.jpg?semt=ais_hybrid&w=740&q=80",
+                desc: { en: "Whole wheat bread baked in clay tandoor.", bn: "মাটির তান্দুরে পোড়ানো হোল হুইট রুটি।" }
+            },
+            {
+                id: 75,
+                title: { en: "Plain Naan", bn: "প্লেন নান" },
+                category: "main",
+                price: { en: "৳40", bn: "৳৪০" },
+                spicy: { en: "🫓 Soft", bn: "🫓 নরম" },
+                img: "https://static.vecteezy.com/system/resources/thumbnails/067/530/774/small/fluffy-naan-bread-pieces-in-soft-motion-free-photo.jpeg",
+                desc: { en: "Classic oven-baked Indian flatbread.", bn: "ক্লাসিক ওভেন বেকড নান রুটি।" }
+            },
+            {
+                id: 76,
+                title: { en: "Butter Naan", bn: "বাটার নান" },
+                category: "main",
+                price: { en: "৳50", bn: "৳৫০" },
+                spicy: { en: "🧈 Soft", bn: "🧈 নরম" },
+                img: "https://png.pngtree.com/thumb_back/fh260/background/20240615/pngtree-realistic-indian-food-naan-bread-with-smoke-image_15877811.jpg",
+                desc: { en: "Soft tandoori naan layered with rich butter.", bn: "মাখনে ভরপুর নরম তান্দুরি নান।" }
+            },
+            {
+                id: 77,
+                title: { en: "Garlic Butter Naan", bn: "গার্লিক বাটার নান" },
+                category: "main",
+                price: { en: "৳60", bn: "৳৬০" },
+                spicy: { en: "🧄 Aromatic", bn: "🧄 সুগন্ধযুক্ত" },
+                img: "https://images.indianexpress.com/2024/07/naan-1.jpg",
+                desc: { en: "Tandoori baked flatbread brushed with garlic and butter.", bn: "রসুন ও মাখন মাখানো তান্দুরি নান রুটি।" }
+            },
+            {
+                id: 78,
                 title: { en: "Blue Lagoon Mocktail", bn: "ব্লু লেগুন মকটেল" },
                 category: "drinks",
                 price: { en: "৳140", bn: "৳১৪০" },
                 spicy: { en: "❄️ Cold Refreshing", bn: "❄️ কোল্ড রিফ্রেশিং" },
-                img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80",
+                img: "https://www.connollycove.com/wp-content/uploads/2024/06/alex-albert-5N-rVG9D_h0-unsplash-scaled-1.jpg",
                 desc: { en: "A wonderful cold refreshing drink of lemon, mint and soda.", bn: "লেবু, পুদিনা এবং সডার এক চমৎকার ঠাণ্ডা রিফ্রেশিং ড্রিংক।" }
             },
             {
-                id: 29,
-                title: { en: "Shahi Reshmi Jilapi & Ice Cream", bn: "শাহী রেশমি জিলপী ও আইসক্রিম" },
+                id: 79,
+                title: { en: "Mango Lassi", bn: "ম্যাঙ্গো লাচ্ছি" },
+                category: "drinks",
+                price: { en: "৳130", bn: "৳১৩০" },
+                spicy: { en: "🥭 Sweet", bn: "৳ মিষ্টি" },
+                img: "https://t4.ftcdn.net/jpg/06/63/95/79/360_F_663957999_E9oLVq0jKxPq00RyHaAHkyeoh3QfjEhx.jpg",
+                desc: { en: "Thick and creamy yogurt smoothie blended with sweet mango.", bn: "মিষ্টি আম ও টকদইয়ের সুস্বাদু মিশ্রণে তৈরি ঘন লাচ্ছি।" }
+            },
+            {
+                id: 80,
+                title: { en: "Cold Coffee with Ice Cream", bn: "আইসক্রিমসহ কোল্ড কফি" },
+                category: "drinks",
+                price: { en: "৳160", bn: "৳১৬০" },
+                spicy: { en: "☕ Chilled", bn: "☕ ঠান্ডা" },
+                img: "https://www.shutterstock.com/shutterstock/videos/4018318969/thumb/11.jpg?ip=x480",
+                desc: { en: "Chilled blended coffee topped with a scoop of vanilla ice cream.", bn: "ভ্যানিলা আইসক্রিম স্কুপসহ ঠান্ডা ব্লেন্ডেড কফি।" }
+            },
+            {
+                id: 81,
+                title: { en: "Milkshake", bn: "মিল্কশেক" },
+                category: "drinks",
+                price: { en: "৳180", bn: "৳১৮০" },
+                spicy: { en: "🍪 Rich", bn: "🍪 রিচ" },
+                img: "https://cdn.leonardo.ai/users/bf482c14-2ac9-4405-8631-e19188767973/generations/1f1889dc-02ac-6ef0-b532-ccf62f476dda/lucid-origin_a_surreal_and_vibrant_cinematic_photo_of_strawberry_chocolate_and_vanilla_milksh-0.jpg",
+                desc: { en: "Creamy milkshake blended with crushed Oreo cookies.", bn: "গুঁড়ো করা ওরিও কুকিজ দিয়ে তৈরি ক্রিমি মিল্কশেক।" }
+            },
+            {
+                id: 82,
+                title: { en: "Ice Cream", bn: "আইসক্রিম" },
                 category: "dessert",
                 price: { en: "৳160", bn: "৳১৬০" },
                 spicy: { en: "🍩 Sweet", bn: "🍩 মিষ্টি" },
-                img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80",
+                img: "https://img.magnific.com/free-photo/front-view-tasty-ice-cream-cones-table_23-2148513945.jpg?w=360",
                 desc: { en: "Royal combination of hot jilapi and vanilla ice cream.", bn: "গরম গরম জিলপী এবং ভ্যানিলা আইসক্রিমের রাজকীয় মেলবন্ধন।" }
             },
             {
-                id: 30,
-                title: { en: "Chicken Fried Rice Combo", bn: "চিকেন ফ্রাইড রাইস কম্বো" },
-                category: "main",
-                price: { en: "৳320", bn: "৳৩২০" },
-                spicy: { en: "🌶️ Medium Spicy", bn: "🌶️ মাঝারি ঝাল" },
-                img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80",
-                desc: { en: "Chinese fried rice with spicy chili chicken and sizzling vegetables.", bn: "চাইনিজ ফ্রাইড রাইসের সাথে স্পাইসি চিলি চিকেন ও সিজলিং ভেজিটেবল।" }
+                id: 83,
+                title: { en: "Traditional Mishti Doi", bn: "ঐতিহ্যবাহী মিষ্টি দই" },
+                category: "dessert",
+                price: { en: "৳90", bn: "৳৯০" },
+                spicy: { en: "🍯 Sweet", bn: "🍯 মিষ্টি" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrjLgePzZv0qpn_F_PKbWH0b2ZqvSoweH1XyVZON0F3ED-jGDCGHQd3Wc&s=10",
+                desc: { en: "Classic Bengali sweet yogurt in traditional clay pot.", bn: "মাটির হাঁড়িতে জমানো ঐতিহ্যবাহী বাঙালি মিষ্টি দই।" }
+            },
+            {
+                id: 84,
+                title: { en: "Chocolate Brownie with Ice Cream", bn: "চকোলেট ব্রাউনি ও আইসক্রিম" },
+                category: "dessert",
+                price: { en: "৳200", bn: "৳২০০" },
+                spicy: { en: "🍫 Chocolaty", bn: "🍫 চকলেটযুক্ত" },
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Aq1q9qx4o0FSbKXEdEpqSk-qKFuJJu98gyDJR6wrKi64hlXQFz3oAbPf&s=10",
+                desc: { en: "Warm fudgy chocolate brownie served with cold vanilla ice cream.", bn: "গরম ব্রাউনি এবং ঠান্ডা ভ্যানিলা আইসক্রিমের অপূর্ব কম্বো।" }
             }
         ];
 
@@ -1302,7 +1789,6 @@
                 paymentOrReq: document.getElementById('resReqInput').value || 'None'
             };
 
-            // Send to Google Sheet & Email via Apps Script Web App
             if (GOOGLE_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
                 fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
@@ -1327,7 +1813,6 @@
                 paymentOrReq: 'Payment: ' + e.target.querySelector('select').value
             };
 
-            // Send to Google Sheet & Email via Apps Script Web App
             if (GOOGLE_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
                 fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
